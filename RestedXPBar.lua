@@ -74,5 +74,30 @@ RestedXPBarFrame:SetScript("OnEvent", function(self, event, ...)
     UpdateRestedXPBar()
 end)
 
+-- Function to show the XP bar
+local function ShowRestedXPBar()
+    RestedXPBarFrame:Show()
+end
+
+-- Function to hide the XP bar
+local function HideRestedXPBar()
+    RestedXPBarFrame:Hide()
+end
+
+-- Register slash commands
+SLASH_RESTEDXPBAR1 = "/restedxpbar"
+SLASH_RESTEDXPBAR2 = "/rxb"
+SlashCmdList["RESTEDXPBAR"] = function(msg)
+    if msg == "show" then
+        ShowRestedXPBar()
+    elseif msg == "hide" then
+        HideRestedXPBar()
+    else
+        DEFAULT_CHAT_FRAME:AddMessage("Usage: /restedxpbar [show|hide]")
+        DEFAULT_CHAT_FRAME:AddMessage("       /rxb [show|hide]")
+    end
+end
+
 -- Initial update on load
 UpdateRestedXPBar()
+RestedXPBarFrame:Show()  -- Ensure the bar is shown initially
