@@ -2,7 +2,7 @@
 ## Title: Rested XP Bar
 ## Notes: Shows a status bar for rested XP percentage.
 ## Author: Thundastruck
-## Version: 1.0
+## Version: 1.0.1
 ## SavedVariables: RestedXPBar_Settings
 
 RestedXPBar.lua

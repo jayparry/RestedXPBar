@@ -82,6 +82,7 @@ end
 -- Function to hide the XP bar
 local function HideRestedXPBar()
     RestedXPBarFrame:Hide()
+    DEFAULT_CHAT_FRAME:AddMessage("RestedXPBar: Bar has been hidden use '/rxb show' to show it again.")
 end
 
 -- Register slash commands
@@ -101,3 +102,4 @@ end
 -- Initial update on load
 UpdateRestedXPBar()
 RestedXPBarFrame:Show()  -- Ensure the bar is shown initially
+DEFAULT_CHAT_FRAME:AddMessage("RestedXPBar: Loaded successfully")
